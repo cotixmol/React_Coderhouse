@@ -1,12 +1,14 @@
 import './App.css';
-import CartWidget from "./components/CartWidget/CartWidget"
-import NavBar from "./components/NavBar/NavBar"
+
+import NavBarPersonalizada from './components/NavBar/NavBarPersonalizada.js'
+import ItemListContainer from './components/ItemListContainer/ItemListContainer';
 
 
 function App() {
   return (
     <>
-  
+      <NavBarPersonalizada></NavBarPersonalizada>
+      <ItemListContainer greetings="Proximamente!"></ItemListContainer>
     </>
   );
 }
