@@ -1,0 +1,16 @@
+.contador_block{
+    text-align: center;
+}
+
+.buttons{
+    appearance: none;
+    border-radius: 5px;
+    box-sizing: border-box;
+    color: #000000;
+    cursor: pointer;
+    display: inline-block;
+    padding: 16px 24px;
+    margin: 1em;
+    }
+
+
