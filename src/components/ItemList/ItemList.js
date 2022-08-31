@@ -12,6 +12,8 @@ export const ItemList = ()=>{
         })
     }
 
+    const [elementos,setElementos] = useState([])
+
     useEffect(()=>{
         const Articulos = async ()=>{
             const arr_productos = await GetProductos()
@@ -19,15 +21,15 @@ export const ItemList = ()=>{
         }
         Articulos();
     },[])
-
-    const [elementos,setElementos] = useState([])
     
     return(
         <>
             {elementos.length>0 &&
-                <div>
-                    <Item elemento={elementos}/>
-                </div>
+                elementos.map((elemento)=>{
+                    return(
+                        <Item elemento={elemento}/>
+                    )
+                })
             }
         </>
     )

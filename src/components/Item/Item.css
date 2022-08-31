@@ -1,0 +1,19 @@
+.tarjeta{
+    display: inline-block;
+    width:30%;
+    margin:1.66%;
+    height:auto;
+
+    border: solid black 2px;
+}
+
+.foto{
+    height: 200px;
+    width: 100%;
+    object-fit: cover;
+}
+
+.boton{
+    padding-left: 10%;
+    padding-right: 10%;
+}
