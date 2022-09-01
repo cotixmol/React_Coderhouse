@@ -1,19 +1,63 @@
 .tarjeta{
-    display: inline-block;
-    width:30%;
-    margin:1.66%;
-    height:auto;
-
-    border: solid black 2px;
+    display:flexbox;
+    border: solid #065A82 4px;
+    border-radius: 35px 35px 0px 0px;
+    background-color: #F1E9DB;
+    max-width: 400px;
+    min-width: 400px;
 }
 
 .foto{
     height: 200px;
     width: 100%;
-    object-fit: cover;
+    object-fit:cover;
+    border-bottom: solid #7A306C 2px;
+    border-radius: 30px 30px 0px 0px;
 }
 
-.boton{
-    padding-left: 10%;
-    padding-right: 10%;
+.titulo{
+    background-color: #065A82;
+    color: #F1E9DB;
+    font-size: 2em;
+    padding:0.8em;
+    min-height: 150px;
+    height: 4em;
+    display: flex;
+    align-items: center;
+
 }
+
+.descripcion{
+    text-align: center;
+    font-size: 1em;
+    background-color: #F1E9DB;
+    color:#065A82;
+    padding-top:1em;
+    min-height: 75px;
+    height: 2em;
+}
+.detalles{
+    text-decoration: none;
+    color:#065A82;
+    font-weight: bold;
+    text-align: center;
+}
+.detalles:hover{
+    font-size: 1.1em;
+}
+
+.precio{
+    text-align: center;
+    font-size: 2em;
+    font-weight: bold;
+    background-color: #F1E9DB;;
+    color: #065A82;
+}
+
+.boton_compra{
+    display:flex;
+    justify-content: center;
+    margin:0.5em;
+    padding:1em;
+    }
+

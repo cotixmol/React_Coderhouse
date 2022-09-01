@@ -1,6 +1,8 @@
 import "./Item.css"
 import { Contador } from "../ItemCount/ItemCount"
 
+import Button from 'react-bootstrap/Button';
+
 export const Item = ({elemento})=>{
 
     return(
@@ -9,10 +11,10 @@ export const Item = ({elemento})=>{
                     <img className="foto" src={elemento.pictureUrl} alt={elemento.title}/>  
                     <p className="titulo">{elemento.title}</p>
                     <p className="descripcion">{elemento.description}</p>
+                    <p className="detalles"><a className="detalles" href="!#">Mas detalles..</a></p>
                     <p className="precio">{elemento.price}</p>
-                    <p><a href="!#">Mas detalles..</a></p>
                     <Contador initialNumber={0} stockAmount={5}></Contador>
-                    <button className="boton"> Comprar </button>
+                    <div className="boton_compra"><Button variant="outline-secondary"> Comprar </Button></div>
                 </div>
         </>
     )

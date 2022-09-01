@@ -1,3 +1,5 @@
+import "../ItemList/ItemList.css"
+
 import { Item } from "../Item/Item"
 import { productos } from "../Articulos"
 import { useEffect, useState } from "react"
@@ -27,7 +29,9 @@ export const ItemList = ()=>{
             {elementos.length>0 &&
                 elementos.map((elemento)=>{
                     return(
-                        <Item elemento={elemento}/>
+                        <div className="contenedor">
+                            <Item elemento={elemento}/>
+                        </div>
                     )
                 })
             }

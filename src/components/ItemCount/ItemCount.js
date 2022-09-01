@@ -2,9 +2,7 @@
 import "./ItemCount.css"
 
 //Importar elementos de Bootstrap
-import Container from 'react-bootstrap/Container';
-import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
+import Button from 'react-bootstrap/Button';
 
 //Importar herramientas de React
 import { useState } from "react";
@@ -31,21 +29,20 @@ export const Contador  = ({initialNumber,stockAmount}) => {
         setNumero(initialNumber)
     }
 
-    return(
-        <Container>
-        <Row>
-            <Col>
-                <div className="contador_block">
-                    <h1> Contador </h1>
-                    <p> {numero} </p>
-                    <span>
-                        <button className="buttons" onClick={OneUp}>+</button>
-                        <button className="buttons" onClick={OneDown}>-</button>
-                        <button className="buttons" onClick={Reinitialize}>Reiniciar</button>
-                    </span>
-                </div>
-            </Col>
-        </Row>
-      </Container>
-    )
+return (
+   <>
+        <div className="buttons">
+                <Button className="button" variant="outline-secondary" size="lg" onClick={OneUp}>
+                    +
+                </Button>
+                <span className="number"> {numero} </span>
+                <Button className="button" variant="outline-secondary" size="lg" onClick={OneDown}>
+                    -
+                </Button>
+                <Button className="button" variant="outline-secondary" size="lg" onClick={Reinitialize}>
+                    Reiniciar
+                </Button>
+        </div>
+    </>
+  );
 }

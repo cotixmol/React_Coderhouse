@@ -1,14 +1,16 @@
 import './App.css';
 
 import NavBarPersonalizada from './components/NavBar/NavBarPersonalizada.js'
-import { ItemList } from './components/ItemList/ItemList';
+import { ItemListContainer } from './components/ItemListContainer/ItemListContainer';
 
 
 function App() {
   return (
     <>
       <NavBarPersonalizada></NavBarPersonalizada>
-      <ItemList></ItemList>
+      <div className='subnav'>
+        <ItemListContainer></ItemListContainer>
+      </div>
     </>
   );
 }
