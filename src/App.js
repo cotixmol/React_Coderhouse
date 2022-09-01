@@ -2,6 +2,7 @@ import './App.css';
 
 import NavBarPersonalizada from './components/NavBar/NavBarPersonalizada.js'
 import { ItemListContainer } from './components/ItemListContainer/ItemListContainer';
+import { ItemDetailContainer } from './components/ItemDetailContainer/ItemDetailContainer';
 
 
 function App() {
@@ -11,6 +12,7 @@ function App() {
       <div className='subnav'>
         <ItemListContainer></ItemListContainer>
       </div>
+        <ItemDetailContainer></ItemDetailContainer>
     </>
   );
 }

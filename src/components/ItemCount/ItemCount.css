@@ -1,10 +1,15 @@
 .buttons{
     display:flex;
+    align-items: center;
     justify-content: center;
     }
 
 .button{
-    margin:0.5em;
+    height: 4em;
+    padding: 1em;
+    margin: 1em;
+    font-size: 1em;
+    font-weight: bold;
 }
 
 .number{

@@ -32,14 +32,14 @@ export const Contador  = ({initialNumber,stockAmount}) => {
 return (
    <>
         <div className="buttons">
-                <Button className="button" variant="outline-secondary" size="lg" onClick={OneUp}>
+                <Button className="button" variant="outline-secondary" size="sm" onClick={OneUp}>
                     +
                 </Button>
                 <span className="number"> {numero} </span>
-                <Button className="button" variant="outline-secondary" size="lg" onClick={OneDown}>
+                <Button className="button" variant="outline-secondary" size="sm" onClick={OneDown}>
                     -
                 </Button>
-                <Button className="button" variant="outline-secondary" size="lg" onClick={Reinitialize}>
+                <Button className="button" variant="outline-secondary" size="sm" onClick={Reinitialize}>
                     Reiniciar
                 </Button>
         </div>
