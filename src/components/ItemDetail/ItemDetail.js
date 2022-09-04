@@ -1,10 +1,10 @@
 
 
-export const ItemDetail = ({detalle})=>{
+export const ItemDetail = ({producto})=>{
         return(
         <>
-            <div>
-                <p>{detalle.id}</p>
+            <div className="contenedor">
+                <div> <img src={producto.pictureUrl} alt={producto.title}></img></div>
             </div>
         </>
     )

@@ -1,6 +1,7 @@
 import { productos } from "../Articulos"
 import { useEffect, useState } from "react"
 import { ItemDetail } from "../ItemDetail/ItemDetail"
+import { useParams } from "react-router-dom"
 
 export const ItemDetailContainer = ()=>{
     
@@ -12,23 +13,29 @@ export const ItemDetailContainer = ()=>{
         })
     }
 
-    const [detalle,setDetalles] = useState([])
+    const [detalles,setDetalles] = useState([])
+    const {id} = useParams()
 
     useEffect(()=>{
         const Detalles = async ()=>{
             const arr_detalles = await GetDetalles()
-            setDetalles(arr_detalles)
+            if (id === undefined){
+                setDetalles(arr_detalles)
+            }else{
+                const filt_arr_detalles = arr_detalles.filter(articulos=>articulos.id===id)
+                setDetalles(filt_arr_detalles)
+            }
         }
         Detalles();
-    },[])
+    },[id])
 
     return(
         <>
-            {detalle.length>0 &&
-                detalle.map((detalle)=>{
+            {detalles.length>0 &&
+                detalles.map((producto)=>{
                     return(
-                        <div className="contenedor">
-                            <ItemDetail detalle={detalle}/>
+                        <div key={producto.id} className="contenedor">
+                            <ItemDetail producto={producto}/>
                         </div>
                     )
                 })
