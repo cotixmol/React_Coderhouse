@@ -7,22 +7,31 @@ import pata_logo from "./logo_pata.png"
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
+import { Link } from "react-router-dom";
 
 const NavBarPersonalizada = () => {
     return(
       <>
+      <div className="my_navbar">
         <Navbar bg="dark" variant="dark">
           <Container>
-            <img className="pata_logo" src={pata_logo} alt="Logo"></img>
-            <Navbar.Brand href="#home">Mascotas</Navbar.Brand>
             <Nav className="me-auto">
-              <Nav.Link href="#home">Inicio</Nav.Link>
-              <Nav.Link href="#ourstore">Nuestra Tienda</Nav.Link>
-              <Nav.Link href="#contact">Contacto</Nav.Link>
-              <Nav.Link href="#cart"><CartWidget></CartWidget></Nav.Link>
+              <Nav.Link>
+                <Link style={{textDecoration: 'none'}} to="/"><img className="pata_logo" src={pata_logo} alt="Logo"></img></Link>
+              </Nav.Link>
+              <Nav.Link>
+                <Link style={{textDecoration: 'none'}} to="/"><span className="menu">Inicio</span></Link>
+              </Nav.Link>
+              <Nav.Link>
+                <Link style={{textDecoration: 'none'}} to="/nosotros"><span className="menu">Contacto</span></Link>
+              </Nav.Link>
+              <Nav.Link>
+                <Link style={{textDecoration: 'none'}} to="/"><CartWidget></CartWidget></Link>
+              </Nav.Link>
             </Nav>
           </Container>
         </Navbar>
+      </div>
       </>
   );
 }

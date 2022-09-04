@@ -1,4 +1,18 @@
 .pata_logo{
     width:40px;
-    padding-right: 1em;
+}
+
+.menu{
+    text-decoration: none;
+    color: white;
+    font-size: 1.5em;
+    padding-left:1em;
+    padding-right:1em;
+}
+
+.my_navbar{
+    position: fixed;
+    width: 100%;
+    top: 0;
+    right: 0;
 }

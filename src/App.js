@@ -1,3 +1,4 @@
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import './App.css';
 
 import NavBarPersonalizada from './components/NavBar/NavBarPersonalizada.js'
@@ -7,13 +8,15 @@ import { ItemDetailContainer } from './components/ItemDetailContainer/ItemDetail
 
 function App() {
   return (
-    <>
+    <BrowserRouter>
       <NavBarPersonalizada></NavBarPersonalizada>
-      <div className='subnav'>
-        <ItemListContainer></ItemListContainer>
-      </div>
-        <ItemDetailContainer></ItemDetailContainer>
-    </>
+      <Routes>
+          <Route path="/" element={<ItemListContainer/>}/>
+          <Route path="/detalle" element={<ItemDetailContainer/>}/>
+          <Route path="/productos" element={<ItemListContainer/>}/>
+          <Route path="/productos/:categoria" element={<ItemListContainer/>}/>
+      </Routes>
+    </BrowserRouter>
   );
 }
 
