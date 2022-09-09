@@ -1,0 +1,22 @@
+.contenedor_detalle{
+    margin:2em;
+    border: black solid 2px;
+    display:flex;
+    margin:5em;
+    border-radius: 30px;
+
+}
+
+.detail_image,.detail_text{
+    height: 400px;
+    padding:1em;
+}
+
+
+.boton_compra{
+    display:flex;
+    justify-content: center;
+    margin:0.5em;
+    padding:1em;
+    }
+
