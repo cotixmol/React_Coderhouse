@@ -20,3 +20,10 @@
     color: #065A82;
     padding:0.5em;
 }
+
+.boton_compra{
+    display:flex;
+    justify-content: center;
+    margin:0.5em;
+    padding:1em;
+    }

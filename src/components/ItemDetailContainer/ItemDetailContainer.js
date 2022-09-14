@@ -29,17 +29,13 @@ export const ItemDetailContainer = ()=>{
         Detalles();
     },[id])
 
-    const unaFuncionSuperior = () => {
-        console.log("La proxima lo hago con contexto")
-    }
-
     return(
         <>
             {detalles.length>0 &&
                 detalles.map((producto)=>{
                     return(
                         <div key={producto.id} className="contenedor">
-                            <ItemDetail unaFuncionSuperior={unaFuncionSuperior} producto={producto}/>
+                            <ItemDetail producto={producto}/>
                         </div>
                     )
                 })

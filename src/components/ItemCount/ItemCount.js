@@ -8,7 +8,7 @@ import Button from 'react-bootstrap/Button';
 import { useState } from "react";
 
 //Crear elemento contador con sus funciones
-export const Contador  = ({initialNumber,stockAmount}) => {
+export const Contador  = ({initialNumber,stockAmount,onAdd}) => {
     const [numero,setNumero] = useState(initialNumber);
 
     const OneUp = () => {
@@ -42,6 +42,7 @@ return (
                 <Button className="button" variant="outline-secondary" size="sm" onClick={Reinitialize}>
                     Reiniciar
                 </Button>
+                <div className="boton_compra"><Button onClick={()=>onAdd(numero)} variant="outline-secondary"> Agregar al Carrito </Button></div>
         </div>
     </>
   );

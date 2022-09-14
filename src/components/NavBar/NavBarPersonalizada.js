@@ -26,7 +26,7 @@ const NavBarPersonalizada = () => {
                 <Link style={{textDecoration: 'none'}} to="/nosotros"><span className="menu">Contacto</span></Link>
               </Nav.Link>
               <Nav.Link>
-                <Link style={{textDecoration: 'none'}} to="/"><CartWidget></CartWidget></Link>
+                <Link style={{textDecoration: 'none'}} to="/cart"><CartWidget></CartWidget></Link>
               </Nav.Link>
             </Nav>
           </Container>
