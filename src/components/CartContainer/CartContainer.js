@@ -10,7 +10,7 @@ export const CartContainer = () =>{
     
     return(
         <div>
-            <p>Cart Container</p>
+            <p>Tengo que acomodar esto con CSS</p> 
             <p>Cart Container</p>
             <p>Cart Container</p>
 
