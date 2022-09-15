@@ -25,24 +25,22 @@ export const Contador  = ({initialNumber,stockAmount,onAdd}) => {
             setNumero(numero-1)
         }
     };
-    const Reinitialize = () => {
-        setNumero(initialNumber)
-    }
 
 return (
    <>
         <div className="buttons">
-                <Button className="button" variant="outline-secondary" size="sm" onClick={OneUp}>
-                    +
-                </Button>
-                <span className="number"> {numero} </span>
-                <Button className="button" variant="outline-secondary" size="sm" onClick={OneDown}>
+                <Button className="button" variant="outline-light" size="sm" onClick={OneDown}>
                     -
                 </Button>
-                <Button className="button" variant="outline-secondary" size="sm" onClick={Reinitialize}>
-                    Reiniciar
+                <span className="number">{numero}</span>
+                <Button className="button" variant="outline-light" size="sm" onClick={OneUp}>
+                    +
                 </Button>
-                <div className="boton_compra"><Button onClick={()=>onAdd(numero)} variant="outline-secondary"> Agregar al Carrito </Button></div>
+                <div className="boton_compra">
+                    <Button onClick={()=>onAdd(numero)} variant="outline-light"> 
+                        Agregar al Carrito 
+                    </Button>
+                </div>
         </div>
     </>
   );

@@ -1,0 +1,9 @@
+contenedor_itemlistcontainer{
+    display:flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding-left: 1.6em;
+    padding-right: 1.6em;
+    margin-top:3em;
+    margin-bottom:2em;
+}

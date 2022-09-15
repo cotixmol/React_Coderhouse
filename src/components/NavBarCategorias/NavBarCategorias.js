@@ -14,6 +14,9 @@ const NavBarCategorias = () => {
           <Container>
             Categorias:
             <Nav className="me-auto">
+            <Nav.Link>
+                <Link style={{textDecoration: 'none'}} to="/">Mostrar todo</Link>
+              </Nav.Link>
               <Nav.Link>
                 <Link style={{textDecoration: 'none'}} to="/productos/perros">Perros</Link>
               </Nav.Link>

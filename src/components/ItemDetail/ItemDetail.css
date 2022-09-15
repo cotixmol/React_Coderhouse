@@ -1,15 +1,48 @@
 .contenedor_detalle{
-    margin:2em;
-    border: black solid 2px;
-    display:flex;
-    margin:5em;
+    border: #065A82 solid 5px;
     border-radius: 30px;
-
+    margin-top:3em;
 }
 
 .detail_image,.detail_text{
-    height: 400px;
+    border-radius: 25px 25px 0px 0px;
+    width:20vw;
+}
+
+.detail_text{
+    background-color: #065A82;
+    border-radius: 0px 0px 25px 25px;
     padding:1em;
 }
 
+.descripcion_detail,.titulo_detail,.precio_detail{
+    margin:0em;
+    padding-bottom:1em;
+    color: whitesmoke;
+}
+
+.titulo_detail{
+    color: #F1E9DB;
+    font-size: 2em;
+    padding-top:0.5em;
+    min-height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.descripcion_detail{
+    text-align: center;
+    font-size: 1em;
+    padding: 1em;
+    color:#F1E9DB;
+    min-height: 8em;
+}
+
+.precio_detail{
+    text-align: center;
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #F1E9DB;
+}
 

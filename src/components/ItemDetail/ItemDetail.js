@@ -15,14 +15,16 @@ export const ItemDetail = ({producto})=>{
         return(
         <>
             <div className="contenedor_detalle">
-                <div> 
+                <div className="detail_image"> 
                     <img className="detail_image" src={producto.pictureUrl} alt={producto.title}/>
                 </div>
                 <div className="detail_text">
-                    <p>{producto.title}</p>
-                    <p>{producto.price}</p>
-                    <p>{producto.description}</p>
-                    <Contador initialNumber={0} stockAmount={5} onAdd={onAdd}></Contador>    
+                    <p className="titulo_detail">{producto.title}</p>
+                    <p className="precio_detail">{producto.price}</p>
+                    <p className="descripcion_detail">{producto.description}</p>
+                    <div className="contador_detail">
+                        <Contador initialNumber={0} stockAmount={5} onAdd={onAdd}></Contador> 
+                    </div>
                 </div>
             </div>
         </>

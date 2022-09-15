@@ -11,10 +11,9 @@ export const Item = ({elemento})=>{
                 <div className="tarjeta">
                     <img className="foto" src={elemento.pictureUrl} alt={elemento.title}/>  
                     <p className="titulo">{elemento.title}</p>
+                    <p className="precio">{elemento.price}</p>
                     <p className="descripcion">{elemento.description}</p>
                     <Link to={`/item/${elemento.id}`}><p className="detalles">Mas detalles</p></Link>
-                    <p className="precio">{elemento.price}</p>
-
                 </div>
         </>
     )

@@ -1,23 +1,23 @@
 export let productos = [   
 
     {id:"1",
-     title:"Alimento Balanceado para Mascotas",
+     title:"Alimento para Perros",
      categoria: "perros",
-     description:"Venta en paquetes de 1kg. Calidad premium.", 
-     price:"$800",
+     description:"Nuestra selección especial de alimento balanceado. Con todas la vitaminas y minerales necesarios para que tu mascota pueda disfrutar. Venta en bolsas de 1kg.", 
+     price:"$1000",
      pictureUrl:"https://t2.ea.ltmcdn.com/es/posts/3/6/2/los_mejores_alimentos_balanceados_para_perros_21263_600.jpg"}
      ,
     {id:"2", 
-     title:"Hueso de Juguete", 
+     title:"Hueso de Cuero", 
      categoria: "perros",
-     description:"Hueso de cuero para mascota. Calidad asegurada. Material no toxico.", 
+     description:"Hueso de juguete hipoalergenico, con materiales comestibles no toxicos. Saborizado.", 
      price:"$600", 
      pictureUrl:"https://www.petsolutions.com.uy/wp-content/uploads/2018/07/hueso-lonja.jpg"}
      ,
     {id:"3", 
-     title:"Comedero de Perro", 
+     title:"Comedero de gran tamaño", 
      categoria: "perros",
-     description:"Comedero de capacidad de 300ml. Para mascotas pequeñas. Acero Inoxidable", 
+     description:"Un comedero de perro de acero inoxidable de larga duración. Para mascotas grandes dada su capacidad de 500ml.", 
      price:"$1200", 
      pictureUrl:"https://static.turbosquid.com/Preview/2019/03/19__09_12_04/_food_bowl_empty1.jpgFD144E49-FE73-4DDA-935C-4CE9E89A72C6Large.jpg"}
      ,
