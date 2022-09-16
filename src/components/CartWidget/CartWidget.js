@@ -10,14 +10,16 @@ import { cartContext } from "../../context/cartContext"
 //Creo el componente cartWidget
 const CartWidget = () => {
     //Tomo la prop valor del contexto, la cual genera el numero vecino a la imagen del carrito.
-    const {valor} = useContext(cartContext)
+    const {getTotalProducts} = useContext(cartContext)
 
     //Renderizo la imagen del carrito junto al numero que corresponda al valor.
     return(
         <>
             <div className="carrito_block">
                 <img src={Carrito} alt="Carrito" className="carrito_image"></img>
-                <span>{valor}</span>
+                <span>
+                    {getTotalProducts()}
+                </span>
             </div>
         </>
     )

@@ -1,6 +1,5 @@
 //Importo las funciones de React
 import { createContext, useState } from "react";
-import { ItemDetail } from "../components/ItemDetail/ItemDetail";
 
 /* Creo el contexto de manera global, esta linea genera de este archivo .js un contexto */
 export const cartContext = createContext(); 
@@ -22,12 +21,13 @@ export const CartProvider = ({children}) => {
             //Buscamos el producto dentro del arreglo si es que existe.
             const productIndex = productCartList.findIndex(element=>element.id===product.id);
             
-            //Con el index del producto lo buscamos dentro del productCartList (o la copia que hicimos arriba) y accedemos a su cantidad, sumandole el request nuevo de cantidad.
+            //Con el index del producto lo buscamos dentro del productCartList (o la copia que hicimos arriba) y accedemos a su cantidad, sumandole el request nuevo de cantidad. Ademas, sumamos el precio total de los nuevos elementos insertados.
             newList[productIndex].quantity = newList[productIndex].quantity + numero;
-            
+            newList[productIndex].totalPrice = "$"+newList[productIndex].quantity * parseInt((newList[productIndex].price).slice(1))
             setProductCartList(newList)
         }else{
-            const newProduct = {...product, quantity:numero}
+            //Genero el precio final como par key value del objeto.
+            const newProduct = {...product, quantity:numero, totalPrice: "$"+numero * parseInt((product.price).slice(1))}
             const newList = [...productCartList]
             newList.push(newProduct)
             setProductCartList(newList)
@@ -54,10 +54,18 @@ export const CartProvider = ({children}) => {
         return elementExists
     }
 
+    //El metodo reduce itera por cada elemento de un arreglo y toma cierta propiedad de cada objeto y la agrega a una variable acumuladora.
+    // acc: acumulador, item: el objeto en si.
+    const getTotalProducts = () =>{
+        const totalProducts = productCartList.reduce((acc,item)=> acc + item.quantity,0)
+        return totalProducts
+    }
+
+
 
     return(
         /*  Los valores dentro del Provider podran ser alcanzados por todos los componentes "children" */
-         <cartContext.Provider value={{products:productCartList,addProduct,valor:0,deleteProduct,clearAllProducts,isInCart}}>  
+         <cartContext.Provider value={{products:productCartList,addProduct,valor:0,deleteProduct,clearAllProducts,getTotalProducts}}>  
             {children}
          </cartContext.Provider>    
     )

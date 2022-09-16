@@ -10,27 +10,34 @@ export const Cart = () =>{
     // Traigo "products" que es productCartList una variable declarada en el cartContext. 
     // Ademas traigo la funcion deleteProduct que en el renderizado estara asociado a un boton, que para esta función toma como parametro el id del producto que acompaña.
     // Ademas traigo la función clearAllProducts que vacia el carro. La logica esta en el cartContext.
-    const {products,deleteProduct,clearAllProducts,isInCart} = useContext(cartContext)
+    const {products,deleteProduct,clearAllProducts} = useContext(cartContext)
 
     //Renderizo una tarjeta con los detalles del elemento que esta en el carrito. Como cantidad, precio y foto. Ademas creo el boton al que asigno la función deleteProduct asignandole como parametro de funcion el valor id del item en cuestion.
     //En la parte inferior genero el boton con la funcion "clearAllProducts" el cual vacia el carrito. 
     return(
         <div className="contenedor_itemcart">
-            {
-                products.map(item=>(
-                    <div className="elemento_itemcart">
-                        <div><img className="imagen_itemcart" alt={item.title} src={item.pictureUrl}></img></div>
-                        <p className="titulo_itemcart">{item.title}</p>
-                        <p className="cantidad_itemcart">{item.quantity}</p>
-                        <p className="precio_itemcart">{item.price}</p>
-                        <button className="boton_itemcart" onClick={()=>deleteProduct(item.id)}> x </button>
-                    </div>
-                ))
-            }
-
-            <button onClick={clearAllProducts}>Vaciar el Carrito</button>
-            <br/>
-            <button onClick={()=>isInCart()}>Esta?</button>
+            <div>
+                {
+                    products.length>0 ?
+                    <>
+                        {
+                            products.map(item=>(
+                                <div className="elemento_itemcart">
+                                    <div><img className="imagen_itemcart" alt={item.title} src={item.pictureUrl}></img></div>
+                                    <p className="titulo_itemcart">{item.title}</p>
+                                    <p className="cantidad_itemcart">{item.quantity}</p>
+                                    <p className="precio_itemcart">{item.price}</p>
+                                    <p className="total_itemcart">{item.totalPrice}</p>
+                                    <button className="boton_itemcart" onClick={()=>deleteProduct(item.id)}> x </button>
+                                </div>
+                            ))
+                        }
+                        <button onClick={clearAllProducts}>Vaciar el Carrito</button>
+                    </>  
+                    :
+                        <p> Hacer el Render de no hay productos </p> 
+                    }
+            </div>
         </div>
     )
 }
