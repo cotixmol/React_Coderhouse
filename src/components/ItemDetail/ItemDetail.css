@@ -2,11 +2,13 @@
     border: #065A82 solid 5px;
     border-radius: 30px;
     margin-top:3em;
+    min-width: 350px;
 }
 
 .detail_image,.detail_text{
     border-radius: 25px 25px 0px 0px;
     width:20vw;
+    min-width: 350px;
 }
 
 .detail_text{
