@@ -1,8 +1,10 @@
 import { createContext, useState } from "react";
 
+/* Creo el contexto de manera global, esta linea genera de este archivo .js un contexto */
 export const cartContext = createContext(); 
 
-
+/*  Creo la función del contexto.
+    Puede verse que tiene una propiedad children la cual se usa dentro del return para que luego en App() sepa identificar donde pueden ser recogidos esos valores. */
 export const CartProvider = ({children}) => {
     const [productCartList, setProductCartList] = useState([])
 
@@ -17,9 +19,9 @@ export const CartProvider = ({children}) => {
         setProductCartList(newArray)
     }
 
-    //Como valores paso el listado de productos y tambien la funcion creada.
     return(
-         <cartContext.Provider value={{products:productCartList, addProduct,valor:10,deleteProduct}}>  
+        /*  Los valores dentro del Provider podran ser alcanzados por todos los componentes "children" */
+         <cartContext.Provider value={{products:productCartList, addProduct,valor:0,deleteProduct}}>  
             {children}
          </cartContext.Provider>    
     )

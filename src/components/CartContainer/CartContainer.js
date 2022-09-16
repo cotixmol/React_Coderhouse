@@ -1,27 +1,12 @@
 import "./CartContainer.css"
 
-import { useContext } from "react"
-import { cartContext } from "../../context/cartContext"
-
+import { Cart } from "../Cart/Cart"
 
 
 export const CartContainer = () =>{
-    const {products, deleteProduct} = useContext(cartContext)
-    
     return(
-        <div>
-            <p>Tengo que acomodar esto con CSS</p> 
-            <p>Cart Container</p>
-            <p>Cart Container</p>
-
-            {
-                products.map(item=>(
-                    <div>
-                        <p>{item.title} {item.quantity}</p>
-                        <button onClick={()=>deleteProduct(item.id)}> Eliminar Producto </button>
-                    </div>
-                ))
-            }
+        <div className="cart">
+            <Cart></Cart>
         </div>
     )
 }

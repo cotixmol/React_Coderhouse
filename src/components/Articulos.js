@@ -40,6 +40,7 @@ export let productos = [
      categoria: "gatos",
      description:"Juguetes variados para gatos con campana.", 
      price:"$500", 
-     pictureUrl:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR6Q-wJOfa39X13FudSGRCOutnzfwKeXhlnNg&usqp=CAU"},
+     pictureUrl:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR6Q-wJOfa39X13FudSGRCOutnzfwKeXhlnNg&usqp=CAU"}
+     ,
 
 ]
