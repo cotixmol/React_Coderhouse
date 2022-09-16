@@ -22,6 +22,7 @@ export const CartProvider = ({children}) => {
             const productIndex = productCartList.findIndex(element=>element.id===product.id);
             
             //Con el index del producto lo buscamos dentro del productCartList (o la copia que hicimos arriba) y accedemos a su cantidad, sumandole el request nuevo de cantidad. Ademas, sumamos el precio total de los nuevos elementos insertados.
+            //Al actualizar productCartList todo esto se ejecuta de nuevo actualizando los precios para atras tambien.
             newList[productIndex].quantity = newList[productIndex].quantity + numero;
             newList[productIndex].totalPrice = "$"+newList[productIndex].quantity * parseInt((newList[productIndex].price).slice(1))
             setProductCartList(newList)
