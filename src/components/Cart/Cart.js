@@ -9,9 +9,11 @@ import { cartContext } from "../../context/cartContext"
 export const Cart = () =>{
     // Traigo "products" que es productCartList una variable declarada en el cartContext. 
     // Ademas traigo la funcion deleteProduct que en el renderizado estara asociado a un boton, que para esta función toma como parametro el id del producto que acompaña.
-    const {products, deleteProduct} = useContext(cartContext)
+    // Ademas traigo la función clearAllProducts que vacia el carro. La logica esta en el cartContext.
+    const {products,deleteProduct,clearAllProducts,isInCart} = useContext(cartContext)
 
     //Renderizo una tarjeta con los detalles del elemento que esta en el carrito. Como cantidad, precio y foto. Ademas creo el boton al que asigno la función deleteProduct asignandole como parametro de funcion el valor id del item en cuestion.
+    //En la parte inferior genero el boton con la funcion "clearAllProducts" el cual vacia el carrito. 
     return(
         <div className="contenedor_itemcart">
             {
@@ -26,6 +28,9 @@ export const Cart = () =>{
                 ))
             }
 
+            <button onClick={clearAllProducts}>Vaciar el Carrito</button>
+            <br/>
+            <button onClick={()=>isInCart()}>Esta?</button>
         </div>
     )
 }
