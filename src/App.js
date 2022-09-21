@@ -11,7 +11,6 @@ import { CartContainer } from './components/CartContainer/CartContainer';
 import { CartProvider } from "./context/cartContext"
 
 
-
 function App() {
   return (
 
