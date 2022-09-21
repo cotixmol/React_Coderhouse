@@ -12,7 +12,7 @@ import { Link } from "react-router-dom";
 import { cartContext } from "../../context/cartContext";
 
 /* Este componente toma el objeto producto del padre ItemDetailContainer (este objeto es uno de los objetos filtrados por id en el componente padre) */
-export const ItemDetail = ({producto})=>{
+export const ItemDetail = ({detalles})=>{
 
         /* Traigo la funcion addProduct de cartContext. El componente ItemDetail esta como hijo de cartContext, pudiendo alcanzar la función addProduct */
         const {addProduct} = useContext(cartContext);
@@ -22,7 +22,7 @@ export const ItemDetail = ({producto})=>{
         /* Genero una función onAdd que usa el parametro "numero" agragandolo al objeto producto (que lo traemos entero usando "Spread Operator") la función traida de cartContext. Como esta función se la vamos a pasar al componente Contador, alli dentro esta la variable "numero".
         La funcionalidad de la función addProduct se encuentra dentro de cartContext. */
         const onAdd = (numero)=>{
-            addProduct(producto,numero) 
+            addProduct(detalles,numero) 
             setQuantity(numero)
         }
 
@@ -31,12 +31,12 @@ export const ItemDetail = ({producto})=>{
         <>
             <div className="contenedor_detalle">
                 <div className="detail_image"> 
-                    <img className="detail_image" src={producto.pictureUrl} alt={producto.title}/>
+                    <img className="detail_image" src={detalles.pictureUrl} alt={detalles.title}/>
                 </div>
                 <div className="detail_text">
-                    <p className="titulo_detail">{producto.title}</p>
-                    <p className="precio_detail">{producto.price}</p>
-                    <p className="descripcion_detail">{producto.description}</p>
+                    <p className="titulo_detail">{detalles.title}</p>
+                    <p className="precio_detail">{detalles.price}</p>
+                    <p className="descripcion_detail">{detalles.description}</p>
                     <div className="contador_detail">
                         <Contador stockAmount={5} onAdd={onAdd}></Contador> 
                     </div>
