@@ -62,11 +62,15 @@ export const CartProvider = ({children}) => {
         return totalProducts
     }
 
+    const getTotalPrice = () =>{
+        const totalPriceProducts = productCartList.reduce((acc,item)=> acc + parseInt((item.totalPrice).slice(1)),0)
+        return "$"+totalPriceProducts
+    }
 
 
     return(
         /*  Los valores dentro del Provider podran ser alcanzados por todos los componentes "children" */
-         <cartContext.Provider value={{products:productCartList,addProduct,valor:0,deleteProduct,clearAllProducts,getTotalProducts}}>  
+         <cartContext.Provider value={{products:productCartList,addProduct,valor:0,deleteProduct,clearAllProducts,getTotalProducts,getTotalPrice}}>  
             {children}
          </cartContext.Provider>    
     )
