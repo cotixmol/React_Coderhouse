@@ -1,3 +1,4 @@
+//Importaciones
 //Importo la hoja de estilos del componente ItemList
 import "../ItemList/ItemList.css"
 //Importo el componente Item, el cual sera hijo de este.
@@ -10,11 +11,9 @@ import { collection, getDocs } from "firebase/firestore";
 //Importo bd de firebase
 import { db } from "../../utils/firebase"
 
-//Creo el componente Item List.
 export const ItemList = ()=>{
-    //Creo la variable elementos, la cual sera iniciada como un array vacio.    
+
     const [elementos,setElementos] = useState([])
-    //Creo la variable categoria la cual usa el parametro "categoria" designado en App().
     const {categoria} = useParams();
 
     useEffect(()=>{
@@ -33,10 +32,10 @@ export const ItemList = ()=>{
         GetData();
     },[categoria])
     
-    //Renderizamos condicionalmente los elementos dentro de "elementos", asignandole al componente hijo como prop cada uno de los elementos.
     return(
         <>
-            {elementos.length>0 &&
+            {
+            elementos.length>0 &&
                 elementos.map((elemento)=>{
                     return(
                         <div className="contenedor">
