@@ -10,6 +10,7 @@
 <h2>Caracteristicas Básicas de la Aplicación</h2>
 <h3>Componentes</h3>
 <p>Estos 3 componentes son la estructura principal del proyecto. Estan llamadas en el archivo principal App.js</p>
+<br/>
 <p><ins>ItemListContainer</ins></p>
 <p><ins>ItemDetailContainer</ins></p>
 <p><ins>CartContainer</ins></p>
