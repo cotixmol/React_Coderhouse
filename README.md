@@ -25,12 +25,12 @@
 <p><ins>NavBarCategorias</ins></p>
 
 <p><ins>ItemList</ins></p>
-&emsp<p><ins>Item</ins></p>
+<p><ins>Item</ins></p>
 
 <h3>Estructura Interna de "ItemDetailContainer"</h3>
 <p><ins>ItemDetail</ins></p>
-&emsp<p><ins>ItemCount</ins></p>
+<p><ins>ItemCount</ins></p>
 
 <h3>Estructura Interna de "CartContainer"</h3>
 <p><ins>Cart</ins></p>
-&emsp<p><ins>Form</ins></p>
+<p><ins>Form</ins></p>
