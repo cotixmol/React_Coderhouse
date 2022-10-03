@@ -8,27 +8,32 @@
 <hr/>
 
 <h2>Caracteristicas Básicas de la Aplicación</h2>
-<h3>Componentes</h3>
+<h3>Componentes Principales</h3>
 <p>Estos 3 componentes son la estructura principal del proyecto. Estan llamadas en el archivo principal App.js</p>
 <br/>
-<p><ins>ItemListContainer</ins></p>
-<p><ins>ItemDetailContainer</ins></p>
-<p><ins>CartContainer</ins></p>
+<p><ins>NavBarPersonalizada:</ins> Barra de Navegación del Proyecto. Esta se encuentra fuera del ruteo.</p>
+<p><ins>ItemListContainer:</ins> Contenedor del Catalogo principal.</p>
+<p><ins>ItemDetailContainer:</ins> Contenedor del Detalle de cada articulo individual.</p>
+<p><ins>CartContainer:</ins> Contenedor del Carrito de compras.</p>
 
-<p><ins>Cart</ins></p>
+<hr/>
 
+<h3>Estructura Interna de "NavBarPersonalizada"</h3>
 <p><ins>CartWidget</ins></p>
 
-<p><ins>Form</ins></p>
-
-<p><ins>Item</ins></p>
-
-<p><ins>ItemCount</ins></p>
-
-<p><ins>ItemDetail</ins></p>
+<h3>Estructura Interna de "ItemListContainer"</h3>
+<p><ins>NavBarCategorias</ins></p>
 
 <p><ins>ItemList</ins></p>
+    <p><ins>Item</ins></p>
 
-<p><ins>NavBarCategorias</ins></p>
+<h3>Estructura Interna de "ItemDetailContainer"</h3>
+<p><ins>ItemDetail</ins></p>
+
+<h3>Estructura Interna de "CartContainer"</h3>
+<p><ins>Cart</ins></p>
+    <p><ins>Form</ins></p>
+
+<p><ins>ItemCount</ins></p>
 
 <p><ins>NavBar</ins></p>
