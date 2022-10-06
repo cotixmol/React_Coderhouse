@@ -31,9 +31,6 @@
 .titulo_itemcart{
     width:10em;
 }
-.boton_itemcart{
-    height:2em;
-}
 
 .cantidad_itemcart,.precio_itemcart{
     width:10em;
@@ -45,9 +42,11 @@
     align-items: center;
     justify-content: center;
     margin-right:1em;
-    width:25px;
-    height:25px;
+    width:3em;
     border-radius: 15px;
+    border: 2px solid #065A82;
+    font-weight: bold;
+    color:#065A82;
 }
 
 .total_itemcart{
@@ -55,3 +54,23 @@
     width: 6em;
 }
 
+.empty_cart_container{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+.empty_cart_container p{
+    text-align: center;
+    font-size: 24px;
+}
+.empty_cart_container img{
+    height:250px;
+}
+
+.price_and_button{
+    padding-right:6px;
+    color:#065A82;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}

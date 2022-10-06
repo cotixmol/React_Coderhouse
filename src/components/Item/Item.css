@@ -3,8 +3,10 @@
     border: solid #065A82 4px;
     border-radius: 35px 35px 35px 35px;
     background-color: #F1E9DB;
+    margin-bottom: 1em;
     max-width: 400px;
     min-width: 400px;
+    box-shadow: 0px 16px 24px rgba(0, 0, 0, 0.06), 0px 2px 6px rgba(0, 0, 0, 0.04), 0px 0px 1px rgba(0, 0, 0, 0.04);
 }
 
 .foto{
@@ -20,29 +22,32 @@
     color: #F1E9DB;
     font-size: 2em;
     padding:0.8em;
-    min-height: 150px;
-    height: 4em;
+    min-height: 100px;
+    height: 3em;
     display: flex;
     align-items: center;
+    justify-content: center;
+    text-align: center;
 }
 
 .descripcion{
     text-align: center;
-    font-size: 1em;
+    font-size: 1.2em;
     background-color: #F1E9DB;
     color:#065A82;
     padding-top:1em;
-    min-height: 8em;
+    min-height: 7em;
     height: 2em;
 }
 .detalles{
     text-decoration: none;
     color:#065A82;
-    font-weight: bold;
+    font-weight: 700;
     text-align: center;
 }
 .detalles:hover{
-    font-size: 1.1em;
+    background-color: #065A82;
+    color:#F1E9DB;
 }
 
 .precio{

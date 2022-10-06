@@ -3,6 +3,8 @@
     border-radius: 30px;
     margin-top:3em;
     min-width: 350px;
+    box-shadow: 0px 16px 24px rgba(0, 0, 0, 0.06), 0px 2px 6px rgba(0, 0, 0, 0.04), 0px 0px 1px rgba(0, 0, 0, 0.04);
+
 }
 
 .detail_image,.detail_text{
@@ -18,16 +20,12 @@
 }
 
 .descripcion_detail,.titulo_detail,.precio_detail{
-    margin:0em;
-    padding-bottom:1em;
     color: whitesmoke;
 }
 
 .titulo_detail{
     color: #F1E9DB;
     font-size: 2em;
-    padding-top:0.5em;
-    min-height: 100px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -36,9 +34,8 @@
 .descripcion_detail{
     text-align: center;
     font-size: 1em;
-    padding: 1em;
     color:#F1E9DB;
-    min-height: 8em;
+    min-height: 5em;
 }
 
 .precio_detail{

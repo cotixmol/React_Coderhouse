@@ -16,3 +16,9 @@
     top: 0;
     right: 0;
 }
+
+.navbarpersonalizada_titulo{
+    font-size: 24px;
+    color: aliceblue;
+    padding-right: 4px;
+}

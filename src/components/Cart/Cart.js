@@ -1,6 +1,7 @@
 //Importaciones
 //Importo la hoja de estilos del Componente Cart
 import "./Cart.css"
+import emptyCart from "./emptyCart.png"
 //Importo las funciones de React
 import { useContext, useState } from "react"
 //Importo el cartContext.
@@ -10,6 +11,7 @@ import { Form } from "../Form/Form"
 //Importo las herramientas de Firebase
 import {addDoc, collection} from "firebase/firestore";
 import { db } from "../../utils/firebase";
+import Button from "react-bootstrap/esm/Button"
 
 export const Cart = () =>{
 
@@ -41,22 +43,32 @@ export const Cart = () =>{
                     <>
                         {
                             products.map(item=>(
+                                <>
                                 <div className="elemento_itemcart">
-                                    <div><img className="imagen_itemcart" alt={item.title} src={item.pictureUrl}></img></div>
+                                    <div>
+                                        <img className="imagen_itemcart" alt={item.title} src={item.pictureUrl}/>
+                                    </div>
                                     <p className="titulo_itemcart">{item.title}</p>
                                     <p className="cantidad_itemcart">{item.quantity}</p>
                                     <p className="precio_itemcart">{item.price}</p>
                                     <p className="total_itemcart">{item.totalPrice}</p>
-                                    <button className="boton_itemcart" onClick={()=>deleteProduct(item.id)}> x </button>
+                                    <button className="boton_itemcart" onClick={()=>deleteProduct(item.id)}> X </button>
                                 </div>
+                                </>
                             ))  
                         }
-                        <button onClick={clearAllProducts}>Vaciar el Carrito</button>
-                        <p>Precio total: {getTotalPrice()}</p>
+                        <div className="price_and_button">
+                            <strong>Precio total: {getTotalPrice()}</strong>
+                            <Button variant="outline-dark" onClick={clearAllProducts}>Vaciar el Carrito</Button>
+                        </div>
                         <Form sendOrder={sendOrder}></Form>
                     </>  
                     :
-                        <p> Hacer el Render de no hay productos </p> 
+                        <div className="empty_cart_container">
+                            <img src={emptyCart} alt="carrito vacio"/>
+                            <p>El carrito de compras esta vacio</p>
+                        </div>
+
                     }
             </div>
         </div>

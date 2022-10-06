@@ -1,0 +1,24 @@
+.form_input{
+    width: 350px;
+    height: 40px;
+    border-radius: 15px;
+    border: 2px solid #065A82;
+    margin-bottom:4px;
+    padding:5px;
+}
+
+.form_container{
+    display:flex;
+    align-items: center;
+}
+
+.form_button{
+    margin-left:50px;
+    height:80px;
+}
+
+.form_text{
+    height:20px;
+    color:#065A82;
+    font-weight: 700;
+}

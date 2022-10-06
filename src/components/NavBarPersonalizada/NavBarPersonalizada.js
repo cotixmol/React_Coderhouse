@@ -1,6 +1,6 @@
 //Importaciones
 //Importo la hoja de estilos de NavBar
-import "./NavBar.css"
+import "./NavBarPersonalizada.css"
 //Importo CartWidget, que es componente hijo de NavBarPersonalizada
 import CartWidget from "../CartWidget/CartWidget";
 //Importo una imagen y le asigno el valor "pata_logo"
@@ -21,13 +21,10 @@ const NavBarPersonalizada = () => {
             <Container>
               <Nav className="me-auto">
                 <Nav.Link>
-                  <Link style={{textDecoration: 'none'}} to="/"><img className="pata_logo" src={pata_logo} alt="Logo"></img></Link>
+                  <Link style={{textDecoration: 'none'}} to="/"><span className="navbarpersonalizada_titulo">Mascotas Molinengo </span><img className="pata_logo" src={pata_logo} alt="Logo"></img></Link>
                 </Nav.Link>
                 <Nav.Link>
                   <Link style={{textDecoration: 'none'}} to="/"><span className="menu">Inicio</span></Link>
-                </Nav.Link>
-                <Nav.Link>
-                  <Link style={{textDecoration: 'none'}} to="/nosotros"><span className="menu">Contacto</span></Link>
                 </Nav.Link>
                 <Nav.Link>
                   <Link style={{textDecoration: 'none'}} to="/cart"><CartWidget></CartWidget></Link>

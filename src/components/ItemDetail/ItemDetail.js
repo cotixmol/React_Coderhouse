@@ -2,9 +2,10 @@
 //Importo la hoja de estilos de este componente
 import "./ItemDetail.css"
 //Importo los componente que van a ser hijos del componente creado en esta pagina.
-import { Contador } from "../ItemCount/ItemCount"
+import { Contador } from "../ItemCount/Contador"
 //Importo las funciones de React
 import { useContext, useState } from "react";
+import Button from "react-bootstrap/esm/Button";
 import { Link } from "react-router-dom";
 //Import el cartContext
 import { cartContext } from "../../context/cartContext";
@@ -36,7 +37,7 @@ export const ItemDetail = ({detalles})=>{
                         {
                             quantity>0 &&
                             <Link to="/cart">
-                                <button>Ir al carrito</button>
+                                <Button variant="outline-light">Ir al carrito</Button>
                             </Link>
                         }
                     </div>

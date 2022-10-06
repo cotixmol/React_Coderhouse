@@ -1,6 +1,6 @@
 //Importaciones
 // Importo las hojas de estilo del Contador
-import "./ItemCount.css"
+import "./Contador.css"
 //Importo los elementos a usar de React-Bootstrap en el componente Contador.
 import Button from 'react-bootstrap/Button';
 //Importao las funciones de React
