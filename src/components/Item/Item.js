@@ -1,7 +1,4 @@
-//Importaciones
-//Importo la hoja de estilos del componente Item
 import "./Item.css"
-//Importo las funciones de React
 import { Link } from "react-router-dom";
 
 export const Item = ({elemento})=>{

@@ -1,14 +1,13 @@
-//Importaciones
-//Importo la hoja de estilos del componente ItemList
+
 import "../ItemList/ItemList.css"
-//Importo el componente Item, el cual sera hijo de este.
+
 import { Item } from "../Item/Item"
-//Importo las funciones de React.
+
 import { useEffect, useState } from "react"
 import { useParams } from "react-router-dom"
-//Importo las funciones de Firebase
+
 import { collection, getDocs } from "firebase/firestore";
-//Importo bd de firebase
+
 import { db } from "../../utils/firebase"
 
 export const ItemList = ()=>{

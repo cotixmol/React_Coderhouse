@@ -1,14 +1,13 @@
-//Importaciones
-//Importo la hoja de estilos del Componente Cart
+
 import "./Cart.css"
 import emptyCart from "./emptyCart.png"
-//Importo las funciones de React
+
 import { useContext, useState } from "react"
-//Importo el cartContext.
+
 import { cartContext } from "../../context/cartContext"
-//Importo el componente del formulario
+
 import { Form } from "../Form/Form"
-//Importo las herramientas de Firebase
+
 import {addDoc, collection} from "firebase/firestore";
 import { db } from "../../utils/firebase";
 import Button from "react-bootstrap/esm/Button"

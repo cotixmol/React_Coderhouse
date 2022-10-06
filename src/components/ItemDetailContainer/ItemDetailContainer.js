@@ -1,14 +1,12 @@
-//Importaciones
-//Importo estilos
 import "./ItemDetailContainer.css"
-//Importo las funciones de React
+
 import { useEffect, useState } from "react"
 import { useParams } from "react-router-dom"
-//Importo los componente que van a ser hijos del componente creado en esta pagina.
+
 import { ItemDetail } from "../ItemDetail/ItemDetail"
-//Importo las funciones de Firebase
+
 import { doc, getDoc } from "firebase/firestore";
-//Importo bd de firebase
+
 import { db } from "../../utils/firebase"
 
 export const ItemDetailContainer = ()=>{
