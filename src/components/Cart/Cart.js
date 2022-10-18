@@ -16,6 +16,7 @@ export const Cart = () =>{
 
     const {products,deleteProduct,clearAllProducts,getTotalPrice} = useContext(cartContext)
     const [orderId,setOrderId] = useState("")
+    const [personBought,setPersonBought] = useState(false)
 
     const sendOrder = (e) =>{
         e.preventDefault();
@@ -31,7 +32,8 @@ export const Cart = () =>{
         const orderCollection = collection(db,"orders");
         addDoc(orderCollection,order)
         .then(respuesta=>setOrderId(respuesta.id))
-        console.log(orderId)
+        setPersonBought(true)
+        clearAllProducts();
     }
 
     return(
@@ -63,6 +65,11 @@ export const Cart = () =>{
                         <Form sendOrder={sendOrder}></Form>
                     </>  
                     :
+                        personBought?
+                        <div className="empty_cart_container">
+                            <span> Su numero de orden: {orderId}</span>
+                        </div>  
+                        :
                         <div className="empty_cart_container">
                             <img src={emptyCart} alt="carrito vacio"/>
                             <p>El carrito de compras esta vacio</p>
