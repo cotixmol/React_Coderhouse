@@ -7,6 +7,20 @@ import Navbar from 'react-bootstrap/Navbar';
 import { Link } from "react-router-dom";
 
 const NavBarCategorias = () => {
+
+    const StaticVars = [{
+      url:"perros",
+      name:"Perros"
+    },
+    {
+      url:"gatos",
+      name:"Gatos"
+    },
+    {
+      url:"/",
+      name:"Mostrar todo"
+    }]
+
     return(
       <>
       <div className="my_navbarcategorias">
@@ -14,15 +28,15 @@ const NavBarCategorias = () => {
           <Container>
             Categorias:
             <Nav className="me-auto">
-            <Nav.Link>
-                <Link style={{textDecoration: 'none'}} to="/">Mostrar todo</Link>
-              </Nav.Link>
-              <Nav.Link>
-                <Link style={{textDecoration: 'none'}} to="/productos/perros">Perros</Link>
-              </Nav.Link>
-              <Nav.Link>
-                <Link style={{textDecoration: 'none'}} to="/productos/gatos">Gatos</Link>
-              </Nav.Link>
+            {
+              StaticVars.map((elm)=>{
+                return(
+                  <Nav.Link>
+                    <Link style={{textDecoration: 'none'}} to={elm.url}>{elm.name}</Link>
+                  </Nav.Link>
+                )
+              })
+            }
             </Nav>
           </Container>
         </Navbar>
