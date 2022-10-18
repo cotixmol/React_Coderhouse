@@ -1,15 +1,11 @@
 .pata_logo{
     width:40px;
 }
-
-.menu{
-    text-decoration: none;
-    color: white;
-    font-size: 1.5em;
-    padding-left:1em;
-    padding-right:1em;
+.navbarpersonalizada_titulo{
+    font-size: 24px;
+    color: aliceblue;
+    padding-right: 4px;
 }
-
 .my_navbar{
     position: fixed;
     width: 100%;
@@ -17,8 +13,31 @@
     right: 0;
 }
 
-.navbarpersonalizada_titulo{
-    font-size: 24px;
-    color: aliceblue;
-    padding-right: 4px;
+.activeMenu{
+    color: gainsboro;
+    font-size: 1.8em;
+    padding-left:1em;
+    padding-right:1em;
+    text-decoration: none;
 }
+.inactiveMenu{
+    color: white;
+    font-size: 1.5em;
+    padding-left:1em;
+    padding-right:1em;
+    text-decoration: none;
+}
+
+.inactiveCart,.activeCart{
+    text-decoration: none;
+}
+.activeCart{
+    font-size: 1.4em;
+
+}
+
+
+
+
+
+

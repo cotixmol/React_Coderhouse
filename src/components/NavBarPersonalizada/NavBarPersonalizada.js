@@ -8,7 +8,7 @@ import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 const NavBarPersonalizada = () => {
 
@@ -18,15 +18,25 @@ const NavBarPersonalizada = () => {
           <Navbar bg="dark" variant="dark">
             <Container>
               <Nav className="me-auto">
+
                 <Nav.Link>
-                  <Link style={{textDecoration: 'none'}} to="/"><span className="navbarpersonalizada_titulo">Mascotas Molinengo </span><img className="pata_logo" src={pata_logo} alt="Logo"></img></Link>
+                  <Link style={{textDecoration:"none"}} to="/">
+                    <span className="navbarpersonalizada_titulo">Mascotas Molinengo </span><img className="pata_logo" src={pata_logo} alt="Logo"/>
+                  </Link>
                 </Nav.Link>
+
+                <Nav.Link className="menu">
+                  <NavLink exact to="/" className={({isActive}) => isActive ? "activeMenu" : "inactiveMenu"}>
+                    <span className="menu">Inicio</span>
+                  </NavLink>
+                </Nav.Link>
+
                 <Nav.Link>
-                  <Link style={{textDecoration: 'none'}} to="/"><span className="menu">Inicio</span></Link>
+                  <NavLink exact to="/cart" className={({isActive}) => isActive ? "activeCart" : "inactiveCart"}>
+                    <CartWidget></CartWidget>
+                  </NavLink>
                 </Nav.Link>
-                <Nav.Link>
-                  <Link style={{textDecoration: 'none'}} to="/cart"><CartWidget></CartWidget></Link>
-                </Nav.Link>
+
               </Nav>
             </Container>
           </Navbar>

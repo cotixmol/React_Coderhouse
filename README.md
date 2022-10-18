@@ -7,7 +7,14 @@
 
 <hr/>
 
-<h2>Caracteristicas Básicas de la Aplicación</h2>
+<h2>Modo de uso y descargar</h2>
+<ol>
+    <li> Descargar repositorio a traves del comando "git clone /url" </li>
+    <li> Ejercutar a traves de la Terminal, en el directorio mascotas-molinengo/ el comando "npm start"</li>
+    <li> A traves del explorador ingresar al url: http://localhost:3000/</li>
+</ol>
+
+<h2>Caracteristicas Estructurales de la Aplicación</h2>
 <h3>Componentes Principales</h3>
 <p>Estos 3 componentes son la estructura principal del proyecto. Estan llamadas en el archivo principal App.js</p>
 <br/>
