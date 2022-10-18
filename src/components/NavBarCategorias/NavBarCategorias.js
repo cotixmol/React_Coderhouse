@@ -9,11 +9,11 @@ import { Link } from "react-router-dom";
 const NavBarCategorias = () => {
 
     const StaticVars = [{
-      url:"perros",
+      url:"/productos/perros",
       name:"Perros"
     },
     {
-      url:"gatos",
+      url:"/productos/gatos",
       name:"Gatos"
     },
     {

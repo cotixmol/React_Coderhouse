@@ -3,6 +3,7 @@
 import "./ItemDetail.css"
 
 import { Contador } from "../ItemCount/Contador"
+import { Loader } from "../Loader/Loader";
 
 import { useContext, useState } from "react";
 import Button from "react-bootstrap/esm/Button";
@@ -10,7 +11,7 @@ import { Link } from "react-router-dom";
 
 import { cartContext } from "../../context/cartContext";
 
-export const ItemDetail = ({detalles})=>{
+export const ItemDetail = ({detalles, isLoading})=>{
 
         const {addProduct} = useContext(cartContext);
 
@@ -23,6 +24,13 @@ export const ItemDetail = ({detalles})=>{
 
         return(
             <>
+            {
+                isLoading ?
+                <div className="loaderContainerItem">
+                    <Loader></Loader>
+                </div>
+                :
+                <>
                 <div className="contenedor_detalle">
                     <div className="detail_image"> 
                         <img className="detail_image" src={detalles.pictureUrl} alt={detalles.title}/>
@@ -43,6 +51,13 @@ export const ItemDetail = ({detalles})=>{
                     </div>
                 </div>
             </>
+            }
+            </>
+
+
+
+
+
     )
 }
 

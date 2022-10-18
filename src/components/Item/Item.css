@@ -1,3 +1,9 @@
+.loaderContainerItem{
+    display: flex;
+    justify-content: center;
+    align-content:center;
+}
+
 .tarjeta{
     display:flexbox;
     border: solid #065A82 4px;

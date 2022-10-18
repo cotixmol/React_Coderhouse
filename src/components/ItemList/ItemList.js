@@ -12,11 +12,14 @@ import { db } from "../../utils/firebase"
 
 export const ItemList = ()=>{
 
+    const [isLoading,setIsLoading] = useState(false)
+
     const [elementos,setElementos] = useState([])
     const {categoria} = useParams();
 
     useEffect(()=>{
         const GetData = async () =>{
+            setIsLoading(true);
             const query = collection(db,"articulos")
             const response = await getDocs(query)
             const docs = response.docs;
@@ -27,6 +30,7 @@ export const ItemList = ()=>{
                 const data_filt = data.filter(articulos=>articulos.categoria===categoria)
                 setElementos(data_filt)
             }
+            setIsLoading(false);
         }
         GetData();
     },[categoria])
@@ -38,7 +42,7 @@ export const ItemList = ()=>{
                 elementos.map((elemento)=>{
                     return(
                         <div className="contenedor">
-                            <Item elemento={elemento}/>
+                            <Item elemento={elemento} isLoading={isLoading}/>
                         </div>
                     )
                 })

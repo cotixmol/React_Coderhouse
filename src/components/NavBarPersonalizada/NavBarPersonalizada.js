@@ -26,13 +26,13 @@ const NavBarPersonalizada = () => {
                 </Nav.Link>
 
                 <Nav.Link className="menu">
-                  <NavLink exact to="/" className={({isActive}) => isActive ? "activeMenu" : "inactiveMenu"}>
+                  <NavLink to="/" className={({isActive}) => isActive ? "activeMenu" : "inactiveMenu"}>
                     <span className="menu">Inicio</span>
                   </NavLink>
                 </Nav.Link>
 
                 <Nav.Link>
-                  <NavLink exact to="/cart" className={({isActive}) => isActive ? "activeCart" : "inactiveCart"}>
+                  <NavLink to="/cart" className={({isActive}) => isActive ? "activeCart" : "inactiveCart"}>
                     <CartWidget></CartWidget>
                   </NavLink>
                 </Nav.Link>
